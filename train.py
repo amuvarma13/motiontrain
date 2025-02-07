@@ -1,6 +1,7 @@
 from transformers import AutoModelForCausalLM, AutoTokenizer, Trainer, TrainingArguments
 import torch
 from datasets import load_dataset
+import wandb
 
 dsn = "amuvarma/humanml3d-flat-train-padded"
 model_name = "meta-llama/Llama-3.2-3B-Instruct"
@@ -9,6 +10,9 @@ model = AutoModelForCausalLM.from_pretrained(model_name)
 tokenizer = AutoTokenizer.from_pretrained(dsn)
 
 dataset = load_dataset(dsn, split="train")
+
+wandb.init(project="motiontrain", name="r0")
+
 
 training_args = TrainingArguments(
     overwrite_output_dir=True,
