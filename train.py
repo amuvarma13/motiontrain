@@ -3,7 +3,7 @@ import torch
 from datasets import load_dataset
 import wandb
 
-dsn = "amuvarma/humanml3d-flat-train-padded"
+dsn = "amuvarma/humanml3d-flat-train-padded-dedup"
 model_name = "meta-llama/Llama-3.2-3B-Instruct"
 model = AutoModelForCausalLM.from_pretrained(model_name)
 
