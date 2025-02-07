@@ -3,7 +3,8 @@ import torch
 from datasets import load_dataset
 
 dsn = "amuvarma/humanml3d-flat-train-padded"
-model = AutoModelForCausalLM.from_pretrained(dsn)
+model_name = "meta-llama/Llama-3.2-3B-Instruct"
+model = AutoModelForCausalLM.from_pretrained(model_name)
 
 tokenizer = AutoTokenizer.from_pretrained(dsn)
 
