@@ -7,7 +7,7 @@ dsn = "amuvarma/humanml3d-flat-train-padded"
 model_name = "meta-llama/Llama-3.2-3B-Instruct"
 model = AutoModelForCausalLM.from_pretrained(model_name)
 
-tokenizer = AutoTokenizer.from_pretrained(dsn)
+tokenizer = AutoTokenizer.from_pretrained(model_name)
 
 dataset = load_dataset(dsn, split="train")
 
