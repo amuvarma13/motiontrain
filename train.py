@@ -14,6 +14,7 @@ model.resize_token_embeddings(model.config.vocab_size + num_add_tokens)
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 
 dataset = load_dataset(dsn, split="train")
+dataset = dataset.shuffle(seed=42)
 
 wandb.init(project="motiontrain", name="r0")
 
