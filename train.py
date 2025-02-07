@@ -21,7 +21,7 @@ wandb.init(project="motiontrain", name="r0")
 
 training_args = TrainingArguments(
     overwrite_output_dir=True,
-    num_train_epochs=1,
+    num_train_epochs=10,
     output_dir="./output",
     per_device_train_batch_size=4,
     logging_steps=1,
@@ -29,7 +29,7 @@ training_args = TrainingArguments(
     # output_dir=f"./{base_repo_id}",
     fsdp="auto_wrap",
     report_to="wandb",
-    save_steps=10000,
+    save_steps=8374,
     
     # save_steps=save_steps,
     remove_unused_columns=True,
