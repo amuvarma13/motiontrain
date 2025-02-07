@@ -22,12 +22,13 @@ training_args = TrainingArguments(
     overwrite_output_dir=True,
     num_train_epochs=1,
     output_dir="./output",
-    per_device_train_batch_size=1,
+    per_device_train_batch_size=2,
     logging_steps=1,
     fp16=True,
     # output_dir=f"./{base_repo_id}",
     fsdp="auto_wrap",
     report_to="wandb",
+    
     # save_steps=save_steps,
     remove_unused_columns=True,
     lr_scheduler_type="cosine"
