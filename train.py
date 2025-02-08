@@ -3,7 +3,7 @@ import torch
 from datasets import load_dataset
 import wandb
 
-dsn = "UjjD/kafka-qa-dataset"
+dsn = "amuvarma/humanml3d-flat-train-padded-dedup"
 model_name = "meta-llama/Llama-3.2-3B-Instruct"
 model = AutoModelForCausalLM.from_pretrained(model_name)
 
@@ -23,11 +23,11 @@ training_args = TrainingArguments(
     overwrite_output_dir=True,
     num_train_epochs=10,
     output_dir="./output",
-    per_device_train_batch_size=1,
+    per_device_train_batch_size=4,
     logging_steps=10,
     fp16=True,
     # output_dir=f"./{base_repo_id}",
-    # fsdp="auto_wrap",
+    fsdp="auto_wrap",
     report_to="wandb",
     save_steps=8374,
     learning_rate=9e-4,
