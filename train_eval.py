@@ -17,7 +17,7 @@ train_dataset = dataset.shuffle(seed=42)
 
 eval_dataset = split_dataset["test"]
 
-wandb.init(project="motiontrain-debug", name="4e2-1b")
+wandb.init(project="motiontrain-full", name="4e2-1b-eval")
 
 training_args = TrainingArguments(
     output_dir="./output",
