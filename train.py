@@ -16,7 +16,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_name)
 dataset = load_dataset(dsn, split="train")
 dataset = dataset.shuffle(seed=42)
 
-wandb.init(project="motiontrainlr", name="5e5")
+wandb.init(project="motiontrainlr", name="4e2-3b")
 
 
 training_args = TrainingArguments(
