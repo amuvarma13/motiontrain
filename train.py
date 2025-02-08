@@ -21,7 +21,7 @@ wandb.init(project="motiontrainlr", name="9e4-2")
 
 training_args = TrainingArguments(
     overwrite_output_dir=True,
-    num_train_epochs=10,
+    num_train_epochs=1,
     output_dir="./output",
     per_device_train_batch_size=1,
     logging_steps=10,
