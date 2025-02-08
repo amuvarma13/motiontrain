@@ -4,7 +4,7 @@ from datasets import load_dataset
 import wandb
 
 dsn = "amuvarma/humanml3d-flat-train-padded-2"
-model_name = "meta-llama/Llama-3.2-3B-Instruct"
+model_name = "meta-llama/Llama-3.2-1B"
 model = AutoModelForCausalLM.from_pretrained(model_name)
 
 num_add_tokens = 1000
