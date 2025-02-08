@@ -7,8 +7,8 @@ model_name = "meta-llama/Llama-3.2-3B-Instruct"
 model = AutoModelForCausalLM.from_pretrained(model_name)
 model = model.resize_token_embeddings(128257)
 
-dsn = "amuvarma/humanml3d-flat-train-padded-dedup"
-dataset = load_dataset(dsn, split="train")
+dataset_name = "UjjD/kafka-qa-dataset"
+dataset = load_dataset(dataset_name, split="train")
 
 print(dataset)
 
