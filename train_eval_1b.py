@@ -15,7 +15,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_name)
 dataset = load_dataset(dsn, split="train")
 train_dataset = dataset.shuffle(seed=42)
 
-eval_dataset = split_dataset["test"]
+eval_dataset = load_dataset(eval_dsn, split="train")
 
 wandb.init(project="motiontrain-full", name="4e2-1b-eval")
 
