@@ -19,7 +19,7 @@ training_args = TrainingArguments(
     logging_steps=1,
     fp16=True,
     remove_unused_columns=True,
-    fdsp = "auto_wrap",
+    # fdsp = "auto_wrap",
 
     report_to="none",  # Disable Weights & Biases logging
 )
