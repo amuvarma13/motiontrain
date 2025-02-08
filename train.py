@@ -16,7 +16,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_name)
 dataset = load_dataset(dsn, split="train")
 dataset = dataset.shuffle(seed=42)
 
-wandb.init(project="motiontrainlr", name="5e3")
+wandb.init(project="motiontrainlr", name="5e6")
 
 
 training_args = TrainingArguments(
@@ -30,7 +30,7 @@ training_args = TrainingArguments(
     # fsdp="auto_wrap",
     report_to="wandb",
     save_steps=8374,
-    learning_rate=5e-3,
+    learning_rate=5e-6,
     
     # save_steps=save_steps,
     remove_unused_columns=True,
