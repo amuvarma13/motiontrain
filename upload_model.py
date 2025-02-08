@@ -3,7 +3,7 @@ import os
 from concurrent.futures import ThreadPoolExecutor
 from tqdm import tqdm
 
-base_repo_id = "output/checkpoint-8734"
+base_repo_id = "output/checkpoint-50244"
 upload_name = "amuvarma/mgpt-1pepoch"
 
 
